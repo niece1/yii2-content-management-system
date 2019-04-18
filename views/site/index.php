@@ -23,8 +23,8 @@ $this->registerMetaTag([
 		
 		<div class="left_hand">
 			<ul id="login">
-				<li><a href="#">login</a></li>
-				<li><a href="#">sign up</a></li>
+				<li><a href="<?= Url::to(['registration/login']);?>">login</a></li>
+				<li><a href="<?= Url::to(['registration/signup']);?>">sign up</a></li>
 			</ul>
 
 			<ul id="choose_language">

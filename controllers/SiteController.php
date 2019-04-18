@@ -8,9 +8,8 @@ use app\models\Category;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
 use app\models\ContactForm;
-
+use app\models\Subscribe;
 use app\models\Article;
 
 class SiteController extends Controller
@@ -69,40 +68,6 @@ class SiteController extends Controller
         return $this->render('index', [
             'recent'=>$recent,
         ]);
-    }
-
-    /**
-     * Login action.
-     *
-     * @return Response|string
-     */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-
-        $model->password = '';
-        return $this->render('login', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Logout action.
-     *
-     * @return Response
-     */
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
     }
 
     /**
@@ -181,5 +146,22 @@ class SiteController extends Controller
             'pagination'=>$data['pagination'],
          'category' => $category,
             ]);
+    }
+    public function actionSubscribe() 
+    {
+        $model = new Subscribe();
+        $formData = Yii::$app->request->post();
+        
+        if (Yii::$app->request->isPost) {
+            $model->email = $formData['email'];
+             if ($model->validate() && $model->save()) {
+                Yii::$app->session->setFlash('subscribeStatus', 'Subscribe completed!');
+            } 
+        }
+    
+     return $this->render('subscribe', [
+            'model' => $model,
+        ]);
+    
     }
 }

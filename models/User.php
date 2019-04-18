@@ -16,7 +16,7 @@ use Yii;
  *
  * @property Comment[] $comments
  */
-class User extends \yii\db\ActiveRecord
+class User extends \yii\db\ActiveRecord 
 {
     /**
      * {@inheritdoc}

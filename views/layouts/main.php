@@ -2,6 +2,7 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
+/* @var $model frontend\models\Subscribe */
 
 use app\widgets\Alert;
 use yii\helpers\Html;
@@ -78,10 +79,10 @@ GaelAsset::register($this);
 				<h6>Useful links</h6>
 				<ul>
 					<li><a href="/"><span>Home</span></a></li>
-					<li><a href="/site/about"><span>About</span></a></li>
-					<li><a href="/site/albums"><span>Albums</span></a></li>
-					<li><a href="/site/blog"><span>Blog</span></a></li>
-					<li><a href="/site/contact"><span>Contact</span></a></li>
+					<li><a href="<?= Url::to(['site/about']);?>"><span>About</span></a></li>
+					<li><a href="<?= Url::to(['site/albums']);?>"><span>Albums</span></a></li>
+					<li><a href="<?= Url::to(['site/blog']);?>"><span>Blog</span></a></li>
+					<li><a href="<?= Url::to(['site/contact']);?>"><span>Contact</span></a></li>
 				</ul>
 			</div>
 
@@ -135,11 +136,13 @@ GaelAsset::register($this);
 			</div>
 
 			<div class="footer_newsletter">
-				<h6>Newsletter Subscribe</h6>
-				<div class="input-wrapper" data-text="">
+				  <h6>Newsletter Subscribe</h6>
+                          
+                                <form method="post" class="input-wrapper" data-text="">
 					<input id="newsletter" type="email" placeholder="Your email">
 					<button type="submit" class="button_footer button_footer-swap_footer">Send<span>Send</span></button> 
-				</div>
+				</form>
+                             
 				<p>Don't forget to folow me on:</p>
 				<a href="#"><i class="fab fa-facebook-f"></i></a>
 				<a href="#"><i class="fab fa-twitter"></i></a>

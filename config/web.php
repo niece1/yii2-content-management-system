@@ -15,6 +15,7 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '1',
+            'enableCsrfValidation' => false, // !Remove within production
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -22,6 +23,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+  //          'loginUrl' => ['registration/login']
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
