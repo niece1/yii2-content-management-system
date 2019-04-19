@@ -12,6 +12,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\assets\GaelAsset;
+use app\widgets\Subscription\SubscriptionWidget;
 
 GaelAsset::register($this);
 ?>
@@ -138,10 +139,9 @@ GaelAsset::register($this);
 			<div class="footer_newsletter">
 				  <h6>Newsletter Subscribe</h6>
                           
-                                <form method="post" class="input-wrapper" data-text="">
-					<input id="newsletter" type="email" placeholder="Your email">
-					<button type="submit" class="button_footer button_footer-swap_footer">Send<span>Send</span></button> 
-				</form>
+                                
+
+<?= app\widgets\Subscription\SubscriptionWidget::widget() ?>
                              
 				<p>Don't forget to folow me on:</p>
 				<a href="#"><i class="fab fa-facebook-f"></i></a>

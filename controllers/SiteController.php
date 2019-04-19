@@ -9,7 +9,7 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\ContactForm;
-use app\models\Subscribe;
+
 use app\models\Article;
 
 class SiteController extends Controller
@@ -146,22 +146,5 @@ class SiteController extends Controller
             'pagination'=>$data['pagination'],
          'category' => $category,
             ]);
-    }
-    public function actionSubscribe() 
-    {
-        $model = new Subscribe();
-        $formData = Yii::$app->request->post();
-        
-        if (Yii::$app->request->isPost) {
-            $model->email = $formData['email'];
-             if ($model->validate() && $model->save()) {
-                Yii::$app->session->setFlash('subscribeStatus', 'Subscribe completed!');
-            } 
-        }
-    
-     return $this->render('subscribe', [
-            'model' => $model,
-        ]);
-    
     }
 }

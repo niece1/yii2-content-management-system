@@ -16,9 +16,7 @@ if ($model->hasErrors()) {
 
 ?>
 
-<form method="post">
-    <p>Email:</p>
-    <input type="text" name="email" />
-    <br><br>
-    <button type="submit">Send</button>
-</form>
+<form method="post" class="input-wrapper" data-text="">
+					<input id="newsletter" type="email" placeholder="Your email">
+					<button type="submit" class="button_footer button_footer-swap_footer">Send<span>Send</span></button> 
+				</form>
