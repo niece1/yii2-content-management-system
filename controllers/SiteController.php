@@ -9,7 +9,7 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\ContactForm;
-
+use app\models\Subscribe;
 use app\models\Article;
 
 class SiteController extends Controller
@@ -147,4 +147,5 @@ class SiteController extends Controller
          'category' => $category,
             ]);
     }
+
 }

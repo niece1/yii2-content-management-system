@@ -13,6 +13,10 @@ use app\models\Subscribe;
 
 class SubscriptionWidget extends Widget
 {
+    public function init()
+    {
+        return parent::init();
+    }
     public function run() 
     {
         $model = new Subscribe();

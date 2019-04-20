@@ -3125,3 +3125,8 @@ ul.pagination li.disabled:hover {
   opacity: 1;
 }
 
+/*Error output newsletter subscription Yii2*/
+.error_newsletter {
+  color: #ffcc00;
+}
+

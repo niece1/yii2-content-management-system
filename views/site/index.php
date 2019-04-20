@@ -295,7 +295,6 @@ $this->registerMetaTag([
 			</div>
 <?php endforeach; ?>
 			
-
 		
 		</div>
 	</section><!--/.Blog section-->

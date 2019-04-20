@@ -7,13 +7,9 @@
 use app\widgets\Alert;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\assets\GaelAsset;
 use app\widgets\Subscription\SubscriptionWidget;
-
 GaelAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -140,8 +136,8 @@ GaelAsset::register($this);
 				  <h6>Newsletter Subscribe</h6>
                           
                                 
+<?= SubscriptionWidget::widget([]) ?>
 
-<?= app\widgets\Subscription\SubscriptionWidget::widget() ?>
                              
 				<p>Don't forget to folow me on:</p>
 				<a href="#"><i class="fab fa-facebook-f"></i></a>
