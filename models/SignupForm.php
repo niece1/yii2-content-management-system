@@ -2,7 +2,7 @@
 
 namespace app\models;
 
-use Yii;
+//use app\models\User;
 use yii\base\Model;
 
 class SignupForm extends Model
@@ -15,7 +15,8 @@ class SignupForm extends Model
     {
         return [
             [['name','email','password'], 'required'],
-            [['name'], 'string'],
+            [['name','email'], 'trim'],
+            [['name'], 'string', 'min' => 2, 'max' => 20],
             [['email'], 'email'],
             [['email'], 'unique', 'targetClass'=>'app\models\User', 'targetAttribute'=>'email']
         ];
@@ -29,5 +30,6 @@ class SignupForm extends Model
             $user->attributes = $this->attributes;
             return $user->create();
         }
+        return false;
     }
 }

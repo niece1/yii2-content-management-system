@@ -31,8 +31,8 @@ class RegistrationController extends Controller
             return $this->goBack();
         }
 
-        $model->password = '';
-        return $this->render('/site/login', [
+    
+        return $this->render('login', [
             'model' => $model,
         ]);
     }
@@ -59,6 +59,6 @@ class RegistrationController extends Controller
                 return $this->redirect(['registration/login']);
             }
         }
-        return $this->render('/registration/signup', ['model'=>$model]);
+        return $this->render('signup', ['model'=>$model]);
     }
 }

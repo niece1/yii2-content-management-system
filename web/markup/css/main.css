@@ -3074,6 +3074,11 @@ ul.pagination li.disabled:hover {
   left: 0%;
 }
 
+.field-loginform-rememberme {
+  display: block;
+  padding: 5px 0;
+}
+
 .signup .signup_wrapper .signup_form button.button_signup_form {
   border: 2px solid #ffcc00;
   padding: 12px 45px;
@@ -3129,4 +3134,13 @@ ul.pagination li.disabled:hover {
 .error_newsletter {
   color: #ffcc00;
 }
+
+/*Error output newsletter subscription Yii2*/
+.help-block {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+
 

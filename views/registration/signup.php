@@ -26,26 +26,38 @@ $this->title = 'Sign up';
         
 
         <section class="signup">
-            <div class="signup_wrapper"
-        <h4>Please fill out the following fields to sign up:</h4>
-
+            <div class="signup_wrapper">
+                 <?= Html::tag('h4', 'Please fill out the following fields to sign up:') ?>
+            
     <?php $form = ActiveForm::begin([
         'id' => 'login-form',
-        'class' => 'signup_form'
+       'options' => ['class' => 'signup_form'],
+     
+  
     ]); ?>
 
-        <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
+        <?= $form->field($model, 'name', [
+            'template' => "{input}<span class=\"highlight\"></span><span class=\"bar\"></span>{label}{error}",
+'options'=>['id'=>'name','class'=>'group', ]])->textInput(['required' => 'required', 'autofocus' => true]) ?>
                 
-                <?= $form->field($model, 'email')->textInput() ?>
+                <?= $form->field($model, 'email', [
+                    'template' => "{input}<span class=\"highlight\"></span><span class=\"bar\"></span>{label}{error}",
+'options'=>['id'=>'email','class'=>'group']])->textInput(['required' => 'required']) ?>
 
-        <?= $form->field($model, 'password')->passwordInput() ?>
+        <?= $form->field($model, 'password', [
+             'template' => "{input}<span class=\"highlight\"></span><span class=\"bar\"></span>{label}{error}",
+           
+'options'=>['id'=>'password','class'=>'group']])->passwordInput(['required' => 'required']) ?>
 
         
-                <?= Html::submitButton('Sign up', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                <?= Html::submitButton('Sign up<span>Sign up</span>', ['class' => 'button_signup_form button_signup_form-swap_signup_form', 'name' => 'signup-button']) ?>
             
 
     <?php ActiveForm::end(); ?>
-                <div class="signup_form">
+            
+           
+                
+      <!--          <form class="signup_form">
 				<h4>Please fill out the following fields to sign up:</h4>
 				<div class="group" id="name">
 					<input type="text" required="required">				
@@ -60,12 +72,12 @@ $this->title = 'Sign up';
 				</div>
 
 				<div class="group" id="password">
-					<input type="text" required="required">
+                                    <input type="password" required="required">
                       <span class="highlight"></span><span class="bar"></span>
                       <label>Password</label>
 				</div>
 				<button type="submit" class="button_signup_form button_signup_form-swap_signup_form">Sign up<span>Sign up</span></button>
-			</div>
+			</form> -->
 </div>
             </section>
 

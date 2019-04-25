@@ -3,9 +3,10 @@
 /* @var $this yii\web\View */
 
 namespace frontend\assets;
-
+use Yii;
 use app\assets\GaelAsset;
 use yii\helpers\Url;
+use yii\helpers\Html;
 
 GaelAsset::register($this);
 $this->registerJsFile('@web/markup/js/counter.js', ['depends'=>[
@@ -23,8 +24,17 @@ $this->registerMetaTag([
 		
 		<div class="left_hand">
 			<ul id="login">
+                            <?php if(Yii::$app->user->isGuest):?>
 				<li><a href="<?= Url::to(['registration/login']);?>">login</a></li>
 				<li><a href="<?= Url::to(['registration/signup']);?>">sign up</a></li>
+                                <?php else: ?>
+                                <?= Html::beginForm(['/registration/logout'], 'post')
+                            . Html::submitButton(
+                                'Logout (' . Yii::$app->user->identity->name . ')',
+                                ['class' => 'btn btn-link logout', 'style'=>"padding-top:10px;"]
+                            )
+                            . Html::endForm() ?>
+                                 <?php endif;?>
 			</ul>
 
 			<ul id="choose_language">
