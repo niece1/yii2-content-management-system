@@ -29,11 +29,10 @@ $this->registerMetaTag([
 				<li><a href="<?= Url::to(['registration/signup']);?>">sign up</a></li>
                                 <?php else: ?>
                                 <?= Html::beginForm(['/registration/logout'], 'post')
-                            . Html::submitButton(
+                       .  '<li>'   . Html::submitButton(
                                 'Logout (' . Yii::$app->user->identity->name . ')',
-                                ['class' => 'btn btn-link logout', 'style'=>"padding-top:10px;"]
-                            )
-                            . Html::endForm() ?>
+                                ['class' => 'logout_button'])
+                            . Html::endForm() . '</li>' ?>
                                  <?php endif;?>
 			</ul>
 

@@ -54,9 +54,10 @@ class RegistrationController extends Controller
         if(Yii::$app->request->isPost)
         {
             $model->load(Yii::$app->request->post());
-            if($model->signup())
+            if($user = $model->signup())
             {
-                return $this->redirect(['registration/login']);
+                Yii::$app->user->login($user);
+                return $this->redirect(['site/index']);
             }
         }
         return $this->render('signup', ['model'=>$model]);

@@ -28,7 +28,10 @@ class SignupForm extends Model
         {
             $user = new User();
             $user->attributes = $this->attributes;
-            return $user->create();
+           
+            if ($user->create()) {
+                return $user;
+            }
         }
         return false;
     }
