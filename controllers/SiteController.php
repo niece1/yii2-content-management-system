@@ -117,14 +117,17 @@ class SiteController extends Controller
     
     public function actionBlog_view($id)
     {
+        $commentForm = new CommentForm();
         $article = Article::findOne($id);
         $popular = Article::getPopular();
         $categories = Category::getAll();
-        
+        $comments = $article->getArticleComments();
         return $this->render('blog-single', [
             'article'=>$article,
             'popular' => $popular,
             'categories' => $categories,
+            'comments'=>$comments,
+            'commentForm'=>$commentForm
         ]);
     }
             
