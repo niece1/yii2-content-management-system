@@ -11,6 +11,7 @@ use yii\filters\VerbFilter;
 use app\models\ContactForm;
 use app\models\Subscribe;
 use app\models\Article;
+use app\models\CommentForm;
 
 class SiteController extends Controller
 {
@@ -123,12 +124,17 @@ class SiteController extends Controller
         $categories = Category::getAll();
         $comments = $article->getArticleComments();
         return $this->render('blog-single', [
-            'article'=>$article,
+            'article' => $article,
             'popular' => $popular,
             'categories' => $categories,
-            'comments'=>$comments,
-            'commentForm'=>$commentForm
+            'comments' => $comments,
+            'commentForm' => $commentForm
         ]);
+    }
+    
+    public function actionComment($id)
+    {
+        $model = new CommentForm();
     }
             
     /**
