@@ -59,6 +59,22 @@ $this->title = $article->title;
 					</div>
 					<p><?=$article->content; ?></p>
 				</div>
+                            
+                            <!--Comments -->
+        <section class="comments">
+            <div class="comments_wrapper">
+                <h5>Leave a reply</h5>
+                <div class="comment_form">
+                    <div class="group" id="comment">
+					<input type="text" required="required">
+                      <span class="highlight"></span><span class="bar"></span>
+                      <label>Comment</label>
+				</div>
+                    <button type="submit" class="button_comment_form button_comment_form-swap_comment_form">Post comment<span>Post comment</span></button>
+                </div>
+            </div>
+        </section><!-- /.Comments -->
+        
 			</div>
 
 			<div class="sidebar">
@@ -122,4 +138,4 @@ $this->title = $article->title;
                             
 			</div>
 		</div>
-	</section><!-- /.Blog single section -->
+	</section><!-- /.Blog single section -->      
