@@ -10,6 +10,8 @@ use yii\helpers\Url;
 use app\assets\AppAsset;
 use app\assets\GaelAsset;
 use app\widgets\Subscription\SubscriptionWidget;
+use yii\widgets\Menu;
+
 GaelAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -43,13 +45,25 @@ GaelAsset::register($this);
 	<div class="overlay overlay-door">
 		<button type="button" class="overlay-close">Close</button>
 		<nav>
-			<ul>
+	<!--		<ul>
 				<li><a href="index.html" class="active_page">Home</a></li>
 				<li><a href="about.html">About</a></li>
 				<li><a href="#">Portfolio</a></li>
 				<li><a href="#">Blog</a></li>
 				<li><a href="contact.html">Contact</a></li>
-			</ul>
+			</ul>-->
+        <?= Menu::widget([
+    
+    'items' => [        
+        ['label' => 'Home', 'url' => ['site/index']],
+        ['label' => 'About', 'url' => ['site/about']],
+        ['label' => 'Albums', 'url' => ['site/albums']],
+        ['label' => 'Blog', 'url' => ['site/blog']],
+        ['label' => 'Contact', 'url' => ['site/contact']]
+    ],
+    'activeCssClass' => 'active_page',
+]);
+?>
 		</nav>
 	</div> <!--/.Overlay menu-->
 

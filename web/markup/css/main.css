@@ -716,7 +716,7 @@ ul {
   transition: color 0.2s;
 }
 
-.overlay ul li a.active_page {
+.overlay ul li.active_page a {
   color: #ffcc00;
 }
 
@@ -2910,7 +2910,7 @@ ul.pagination li.disabled:hover {
     margin: auto;
 }
 
-/*Login form Yii2*/
+/*Signup form Yii2*/
 .signup {
     width: 100%;
     height: auto;
@@ -3159,6 +3159,147 @@ ul.pagination li.disabled:hover {
   -webkit-transition: all .5s ease-out;
   -o-transition: all .5s ease-out;
   transition: all .5s ease-out;
+}
+
+/*Comments*/
+
+.blog_single .blog_single_wrapper .single_content .comments h5 {
+  color: #ffcc00;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form #comment {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form #comment input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-bottom: 2px solid #000;
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form #comment input::-webkit-input-placeholder {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form #comment input:-ms-input-placeholder {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form #comment input::-ms-input-placeholder {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form #comment input::placeholder {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form #comment input:focus {
+  outline: none;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form #comment input:focus ~ label, .blog_single .blog_single_wrapper .single_content .comments .comment_form #comment input:valid ~ label {
+  top: -1.4rem;
+  font-size: 1.2rem;
+  color: #ffcc00;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form #comment input:focus ~ .bar:before {
+  width: 100%;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form .group {
+  position: relative;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form label {
+  color: #000;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: 350ms ease all;
+  -o-transition: 350ms ease all;
+  transition: 350ms ease all;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form .bar:before {
+  content: '';
+  height: 3px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #ffcc00;
+  -webkit-transition: 350ms ease all;
+  -o-transition: 350ms ease all;
+  transition: 350ms ease all;
+  left: 0%;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form button.button_comment_form {
+  border: 2px solid #ffcc00;
+  padding: 12px 45px;
+  margin: 15px 0 0 0;
+  font-size: 1.6rem;
+  position: relative;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #000;
+  background-color: transparent;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form button.button_comment_form-swap_comment_form span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 12px 45px;
+  font-size: 1.6rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0;
+  color: #fff;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form button.button_comment_form-swap_comment_form:before {
+  content: "";
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: #ffcc00;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form button.button_comment_form-swap_comment_form:hover:before {
+  width: 100%;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comment_form button.button_comment_form-swap_comment_form:hover span {
+  opacity: 1;
 }
 
 

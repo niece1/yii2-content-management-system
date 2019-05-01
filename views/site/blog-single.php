@@ -9,6 +9,7 @@ use yii\helpers\Html;
 use app\assets\GaelAsset;
 use Yii;
 use yii\widgets\LinkPager;
+use yii\widgets\ActiveForm;
 
 $this->title = $article->title;
 ?>
@@ -61,19 +62,42 @@ $this->title = $article->title;
 				</div>
                             
                             <!--Comments -->
-        <section class="comments">
-            <div class="comments_wrapper">
+        <div class="comments">
+            <div class="comments_text">
+                <div class="comments_author">
+                    <img src="#" width="45" height="45" alt="Avatar">
+                    <p>Taylor Bradford</p>                                     
+                </div>
+                <small>Date</small>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo atque at soluta eaque deserunt, tempore, vero labore eos ea necessitatibus.</p>
+            </div>
                 <h5>Leave a reply</h5>
-                <div class="comment_form">
+                <?php $form = ActiveForm::begin([     
+       'options' => ['class' => 'comment_form'],
+     
+  
+    ]); ?>
+
+       
+                
+                <?= $form->field($commentForm, 'comment', [
+                    'template' => "{input}<span class=\"highlight\"></span><span class=\"bar\"></span>{label}{error}",
+'options'=>['id'=>'comment','class'=>'group']])->textInput(['required' => 'required']) ?>
+      
+                <?= Html::submitButton('Post comment<span>Post comment</span>', ['class' => 'button_comment_form button_comment_form-swap_comment_form']) ?>
+            
+
+    <?php ActiveForm::end(); ?>
+          <!--      <div class="comment_form">
                     <div class="group" id="comment">
 					<input type="text" required="required">
                       <span class="highlight"></span><span class="bar"></span>
                       <label>Comment</label>
 				</div>
                     <button type="submit" class="button_comment_form button_comment_form-swap_comment_form">Post comment<span>Post comment</span></button>
-                </div>
-            </div>
-        </section><!-- /.Comments -->
+                </div>-->
+            
+        </div><!-- /.Comments -->
         
 			</div>
 
