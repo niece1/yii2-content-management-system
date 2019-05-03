@@ -3167,6 +3167,23 @@ ul.pagination li.disabled:hover {
   color: #ffcc00;
 }
 
+.blog_single .blog_single_wrapper .single_content .comments .comments_text {
+  margin: 0 0 20px 0;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comments_text .comments_author {
+  margin: 0 0 5px 0;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comments_text p.comment_area {
+  margin: 5px 0;
+}
+
+.blog_single .blog_single_wrapper .single_content .comments .comments_text small {
+  font-size: 1.2rem;
+  color: #ffcc00;
+}
+
 .blog_single .blog_single_wrapper .single_content .comments .comment_form #comment {
   width: 100%;
   margin: 30px 0;

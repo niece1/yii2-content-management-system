@@ -188,6 +188,6 @@ class Article extends \yii\db\ActiveRecord
     }
     public function getArticleComments()
     {
-        return $this->getComments()->where(['status'=>1])->all();
+        return $this->getComments()->where(['status'=>0])->all();
     }
 }

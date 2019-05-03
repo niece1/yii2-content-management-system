@@ -29,14 +29,9 @@ $this->title = 'Login';
                  <?= Html::tag('h4', 'Please fill out the following fields to login:') ?>
             
     <?php $form = ActiveForm::begin([
-        'id' => 'login-form',
-       'options' => ['class' => 'signup_form'],
-     
-  
+       'options' => ['class' => 'signup_form'], 
     ]); ?>
-
-       
-                
+                      
                 <?= $form->field($model, 'email', [
                     'template' => "{input}<span class=\"highlight\"></span><span class=\"bar\"></span>{label}{error}",
 'options'=>['id'=>'email','class'=>'group']])->textInput(['required' => 'required', 'autofocus' => true]) ?>
@@ -48,7 +43,7 @@ $this->title = 'Login';
 
                <?= $form->field($model, 'rememberMe', ['options'=>['class'=>'group']])->checkbox() ?>
         
-                <?= Html::submitButton('Login<span>Login</span>', ['class' => 'button_signup_form button_signup_form-swap_signup_form', 'name' => 'login-button']) ?>
+                <?= Html::submitButton('Login<span>Login</span>', ['class' => 'button_signup_form button_signup_form-swap_signup_form']) ?>
             
 
     <?php ActiveForm::end(); ?>

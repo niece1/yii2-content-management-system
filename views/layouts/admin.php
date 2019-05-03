@@ -41,6 +41,7 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/admin/default/index']],
             ['label' => 'Articles', 'url' => ['/admin/article/index']],
             ['label' => 'Categories', 'url' => ['/admin/category/index']],
+            ['label' => 'Comments', 'url' => ['/admin/comment/index']],
             ['label' => 'Tags', 'url' => ['/admin/tag/index']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]

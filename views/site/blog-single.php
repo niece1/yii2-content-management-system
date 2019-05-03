@@ -62,17 +62,26 @@ $this->title = $article->title;
 				</div>
                             
                             <!--Comments -->
+                            
         <div class="comments">
+            <?php if(!empty($comments)):?>
+                            <?php foreach($comments as $comment):?>
             <div class="comments_text">
                 <div class="comments_author">
-                    <img src="#" width="45" height="45" alt="Avatar">
-                    <p>Taylor Bradford</p>                                     
+                    <img src="<?= $comment->user->image; ?>" width="45" height="45" alt="Avatar">
+                    <p><?= $comment->user->name; ?></p>                                     
                 </div>
-                <small>Date</small>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo atque at soluta eaque deserunt, tempore, vero labore eos ea necessitatibus.</p>
+                <small><?= $comment->getDate(); ?></small>
+                <p class="comment_area"><?= $comment->text; ?>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo atque at soluta eaque deserunt, tempore, vero labore eos ea necessitatibus.</p>
             </div>
+            <?php endforeach; ?>
+            <?php endif; ?>
+            
+            <?php if(!Yii::$app->user->isGuest):?>
                 <h5>Leave a reply</h5>
-                <?php $form = ActiveForm::begin([     
+                 
+                <?php $form = ActiveForm::begin([    
+                    'action'=>['site/comment', 'id'=>$article->id],
        'options' => ['class' => 'comment_form'],
      
   
@@ -96,9 +105,9 @@ $this->title = $article->title;
 				</div>
                     <button type="submit" class="button_comment_form button_comment_form-swap_comment_form">Post comment<span>Post comment</span></button>
                 </div>-->
-            
+            <?php endif;?>
         </div><!-- /.Comments -->
-        
+      
 			</div>
 
 			<div class="sidebar">

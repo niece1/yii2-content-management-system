@@ -37,7 +37,7 @@ class Comment extends \yii\db\ActiveRecord
             [['article_id'], 'exist', 'skipOnError' => true, 'targetClass' => Article::className(), 'targetAttribute' => ['article_id' => 'id']],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];
-    }
+    } 
 
     /**
      * {@inheritdoc}
@@ -67,5 +67,9 @@ class Comment extends \yii\db\ActiveRecord
     public function getUser()
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
+    }
+    public function getDate()
+    {
+        return Yii::$app->formatter->asDate($this->date);
     }
 }

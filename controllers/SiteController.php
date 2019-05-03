@@ -118,11 +118,11 @@ class SiteController extends Controller
     
     public function actionBlog_view($id)
     {
-        $commentForm = new CommentForm();
         $article = Article::findOne($id);
         $popular = Article::getPopular();
         $categories = Category::getAll();
         $comments = $article->getArticleComments();
+        $commentForm = new CommentForm();
         return $this->render('blog-single', [
             'article' => $article,
             'popular' => $popular,
@@ -132,9 +132,17 @@ class SiteController extends Controller
         ]);
     }
     
-    public function actionComment($id)
+     public function actionComment($id)
     {
         $model = new CommentForm();
+        
+        if(Yii::$app->request->isPost)
+        {
+            $model->load(Yii::$app->request->post());
+            $model->saveComment($id);
+            return $this->redirect(['site/blog_view', 'id'=>$id]);
+        }
+        
     }
             
     /**

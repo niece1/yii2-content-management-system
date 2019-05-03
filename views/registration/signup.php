@@ -29,7 +29,7 @@ $this->title = 'Sign up';
                  <?= Html::tag('h4', 'Please fill out the following fields to sign up:') ?>
             
     <?php $form = ActiveForm::begin([
-        'id' => 'login-form',
+     
        'options' => ['class' => 'signup_form'],
      
   
@@ -49,7 +49,7 @@ $this->title = 'Sign up';
 'options'=>['id'=>'password','class'=>'group']])->passwordInput(['required' => 'required']) ?>
 
         
-                <?= Html::submitButton('Sign up<span>Sign up</span>', ['class' => 'button_signup_form button_signup_form-swap_signup_form', 'name' => 'signup-button']) ?>
+                <?= Html::submitButton('Sign up<span>Sign up</span>', ['class' => 'button_signup_form button_signup_form-swap_signup_form']) ?>
             
 
     <?php ActiveForm::end(); ?>
