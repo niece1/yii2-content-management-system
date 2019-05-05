@@ -43,7 +43,7 @@ AppAsset::register($this);
             ['label' => 'Categories', 'url' => ['/admin/category/index']],
             ['label' => 'Comments', 'url' => ['/admin/comment/index']],
             ['label' => 'Tags', 'url' => ['/admin/tag/index']],
-            Yii::$app->user->isGuest ? (
+     /*       Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
                 '<li>'
@@ -54,7 +54,7 @@ AppAsset::register($this);
                 )
                 . Html::endForm()
                 . '</li>'
-            )
+            )*/
         ],
     ]);
     NavBar::end();

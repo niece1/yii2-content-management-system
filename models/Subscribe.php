@@ -10,7 +10,7 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 
-class Subscribe extends Model
+class Subscribe extends \yii\db\ActiveRecord
 {
     public $email;
     

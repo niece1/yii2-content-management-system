@@ -3319,5 +3319,9 @@ ul.pagination li.disabled:hover {
   opacity: 1;
 }
 
+.form-group {
+	display: inline-block;
+}
+
 
 

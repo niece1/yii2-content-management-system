@@ -20,14 +20,15 @@ class SubscriptionWidget extends Widget
     public function run() 
     {
         $model = new Subscribe();
-        $formData = Yii::$app->request->post();
+      /*  $formData = Yii::$app->request->post();
         
         if (Yii::$app->request->isPost) {
             $model->email = $formData['email'];
              if ($model->validate() && $model->save()) {
                 Yii::$app->session->setFlash('subscribeStatus', 'Subscribe completed!');
             } 
-        }
+        }*/
+        
     
      return $this->render('subscribe', [
             'model' => $model,
