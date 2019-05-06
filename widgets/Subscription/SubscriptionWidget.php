@@ -4,7 +4,7 @@ namespace app\widgets\Subscription;
 
 use Yii;
 use yii\base\Widget;
-use app\models\Subscribe;
+use app\models\SubscriberForm;
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,8 +18,7 @@ class SubscriptionWidget extends Widget
         return parent::init();
     }
     public function run() 
-    {
-        $model = new Subscribe();
+    {      
       /*  $formData = Yii::$app->request->post();
         
         if (Yii::$app->request->isPost) {
@@ -28,7 +27,12 @@ class SubscriptionWidget extends Widget
                 Yii::$app->session->setFlash('subscribeStatus', 'Subscribe completed!');
             } 
         }*/
-        
+         $model = new SubscriberForm();
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if($model->saveEmail()) {
+                 Yii::$app->session->setFlash('subscribeStatus', 'Subscribe completed! Thank you.');
+            }
+        }
     
      return $this->render('subscribe', [
             'model' => $model,
