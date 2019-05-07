@@ -52,7 +52,7 @@ $this->title = $article->title;
 							<h5><?=$article->title; ?></h5>
 							<div class="blog_line"></div>
 							<p>
-								By <a href="#">Admin</a><i class="fas fa-circle"></i>In <a href="#">Travels</a>
+								By <a href="#"><?= $article->author->name; ?></a><i class="fas fa-circle"></i>In <a href="<?= Url::to(['site/category','id'=>$article->category->id]); ?>"><?= $article->category->title; ?></a>
 							</p>
 
 						</div>

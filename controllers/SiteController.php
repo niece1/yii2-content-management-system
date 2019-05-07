@@ -123,6 +123,7 @@ class SiteController extends Controller
         $categories = Category::getAll();
         $comments = $article->getArticleComments();
         $commentForm = new CommentForm();
+        $article->viewedCounter();
         return $this->render('blog-single', [
             'article' => $article,
             'popular' => $popular,

@@ -32,7 +32,7 @@ class SubscriberForm extends Model
     
     public function saveEmail()
     {
-      /*  $sql = "INSERT INTO subscriber (id, email) VALUES (null, '{$this->email}')"; //curly brackets for security reason
+      /*  $sql = "INSERT INTO subscriber (id, email) VALUES (null, '{$this->email}')"; //curly brackets added for security reason
         return Yii::$app->db->createCommand($sql)->execute();*/
         $subscriber = new Subscriber();
         $subscriber->email = $this->email;
