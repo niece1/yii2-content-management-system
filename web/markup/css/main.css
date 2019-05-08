@@ -3319,9 +3319,12 @@ ul.pagination li.disabled:hover {
   opacity: 1;
 }
 
+/*some changes to form tag Yii2*/
 .form-group {
-	display: inline-block;
+  display: inline-block;
 }
+
+
 
 
 

@@ -11,6 +11,7 @@ use yii\filters\VerbFilter;
 use app\models\ContactForm;
 use app\models\Subscribe;
 use app\models\Article;
+use app\models\Tag;
 use app\models\CommentForm;
 
 class SiteController extends Controller
@@ -124,12 +125,14 @@ class SiteController extends Controller
         $comments = $article->getArticleComments();
         $commentForm = new CommentForm();
         $article->viewedCounter();
+        $tags = Tag::getAllTags();
         return $this->render('blog-single', [
             'article' => $article,
             'popular' => $popular,
             'categories' => $categories,
             'comments' => $comments,
-            'commentForm' => $commentForm
+            'commentForm' => $commentForm,
+            'tags' => $tags
         ]);
     }
     
@@ -163,6 +166,16 @@ class SiteController extends Controller
             'articles'=>$data['articles'],
             'pagination'=>$data['pagination'],
          'category' => $category,
+            ]);
+    }
+    public function actionTag($id)
+    {
+        $data = Tag::getArticlesByTag($id);
+       $tags = Tag::findOne($id);
+        return $this->render('tag', [
+            'articles'=>$data['articles'],
+            'pagination'=>$data['pagination'],
+         'tags' => $tags
             ]);
     }
 

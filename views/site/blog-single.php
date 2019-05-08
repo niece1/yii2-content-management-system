@@ -159,13 +159,9 @@ $this->title = $article->title;
 				<div class="tags_widget">
 					<h5>Tag Cloud</h5>
 					<div class="tag_cloud">
-						<a href="#">Mountains</a>
-						<a href="#">Backpacking</a>
-						<a href="#">Country</a>
-						<a href="#">Town</a>
-						<a href="#">Town</a>
-						<a href="#">City</a>
-						<a href="#">Town</a>
+                                             <?php foreach($tags as $tag):?>
+						<a href="<?= Url::to(['site/tag','id'=>$tag->id]); ?>"><?= $tag->title; ?></a>
+						<?php endforeach; ?>
 					</div>
 				</div>
                             
