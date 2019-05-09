@@ -66,9 +66,4 @@ $this->title = $tag->title;
                
 	</section><!--/.Blog section-->
 
- <!--Pagination-->
-                <?php
-                echo LinkPager::widget([
-    'pagination' => $pagination,
-]);
-                ?><!--/.Pagination-->
+ 

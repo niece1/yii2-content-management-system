@@ -170,12 +170,10 @@ class SiteController extends Controller
     }
     public function actionTag($id)
     {
-        $data = Tag::getArticlesByTag($id);
-       $tags = Tag::findOne($id);
+        $articles = Tag::getArticlesByTag($id);   
+     //  var_dump($articles);die;
         return $this->render('tag', [
-            'articles'=>$data['articles'],
-            'pagination'=>$data['pagination'],
-         'tags' => $tags
+            'articles'=>$articles,          
             ]);
     }
 
