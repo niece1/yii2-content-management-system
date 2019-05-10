@@ -9,10 +9,10 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\ContactForm;
-use app\models\Subscribe;
 use app\models\Article;
 use app\models\Tag;
 use app\models\CommentForm;
+use app\models\User;
 
 class SiteController extends Controller
 {
@@ -170,10 +170,24 @@ class SiteController extends Controller
     }
     public function actionTag($id)
     {
-        $articles = Tag::getArticlesByTag($id);   
+        $data = Tag::getArticlesByTag($id);
+        $tags = Tag::findOne($id);
      //  var_dump($articles);die;
         return $this->render('tag', [
-            'articles'=>$articles,          
+             'articles'=>$data['articles'],
+            'pagination'=>$data['pagination'],
+             'tags' => $tags,
+            ]);
+    }
+    public function actionAuthor($id)
+    {
+        $data = User::getArticlesByUser($id);
+        $user = User::findOne($id);
+     //  var_dump($articles);die;
+        return $this->render('author', [
+             'articles'=>$data['articles'],
+            'pagination'=>$data['pagination'],
+             'user' => $user,
             ]);
     }
 

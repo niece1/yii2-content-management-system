@@ -9,15 +9,7 @@ use app\assets\GaelAsset;
 
 $this->title = 'About';
 ?>
-<div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        This is the About page. You may modify the following file to customize its content:
-    </p>
-
-    <code><?= __FILE__ ?></code>
-</div>
 
 <!--Header-->
 	<section class="header" style="background-image: url(/markup/img/IMG_6254.jpg);">
@@ -55,25 +47,25 @@ $this->title = 'About';
 			<div class="skills_wrapper">
 			
 				<div class="skills_item">
-					<img src="img/coffee-break.png" alt="Lifestyle">
+					<img src="/markup/img/coffee-break.png" alt="Lifestyle">
 					<h6>Lifestyle</h6>
 					<p>Lorem ipsum dolor sit amet.</p>
 				</div>
 			
 				<div class="skills_item">
-					<img src="img/honeymoon.png" alt="Lifestyle">
+					<img src="/markup/img/honeymoon.png" alt="Lifestyle">
 					<h6>Travels</h6>
 					<p>Lorem ipsum dolor sit amet.</p>
 				</div>
 			
 				<div class="skills_item">
-					<img src="img/office-worker.png" alt="Lifestyle">
+					<img src="/markup/img/office-worker.png" alt="Lifestyle">
 					<h6>Portrait</h6>
 					<p>Lorem ipsum dolor sit amet.</p>
 				</div>
 			
 				<div class="skills_item">
-					<img src="img/analysing.png" alt="Lifestyle">
+					<img src="/markup/img/analysing.png" alt="Lifestyle">
 					<h6>Reportage</h6>
 					<p>Lorem ipsum dolor sit amet.</p>
 				</div>

@@ -60,11 +60,18 @@ class Tag extends \yii\db\ActiveRecord
     public static function getArticlesByTag($id)
     {
         // build a DB query to get all articles
-        return Article::find()->joinWith('tags')->where(['tag_id' => $id])->all();
+        $query = Article::find()->joinWith('tags')->where(['tag_id' => $id]);
+       $count = $query->count();
+        // create a pagination object with the total count
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize'=>3]);
+        // limit the query using the pagination and retrieve the articles
+        $articles = $query->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+        $data['articles'] = $articles;
+        $data['pagination'] = $pagination;
         
-       
-      
-        
-      
+        return $data; 
+
     }
 }

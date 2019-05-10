@@ -2,15 +2,12 @@
 
 /* @var $this yii\web\View */
 
-namespace frontend\assets;
+namespace app\views\site\author;
 
 use yii\helpers\Url;
-use yii\helpers\Html;
-use app\assets\GaelAsset;
-use Yii;
 use yii\widgets\LinkPager;
 
-$this->title = 'Blog';
+$this->title = $user->name;
 ?>
 
 <!--Header-->
@@ -22,8 +19,8 @@ $this->title = 'Blog';
 				<div class="hamburger_menu"></div>	  
 			</div>	  
 		</div>
-		<div class="parallax_text">
-			<h3>Blog</h3>
+		<div class="parallax_text"> 
+			<h3>Author: <?= $user['name']; ?></h3>
 		</div>
 	</section><!-- /.Header -->
 
@@ -68,7 +65,6 @@ $this->title = 'Blog';
 		</div>
                
 	</section><!--/.Blog section-->
-
  <!--Pagination-->
                 <?php
                 echo LinkPager::widget([

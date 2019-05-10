@@ -7,7 +7,7 @@ namespace app\views\site\tag;
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
 
-$this->title = $tag->title;
+$this->title = $tags->title;
 ?>
 
 <!--Header-->
@@ -20,7 +20,7 @@ $this->title = $tag->title;
 			</div>	  
 		</div>
 		<div class="parallax_text"> 
-			<h3>Tag: <?= $tag['title']; ?></h3>
+			<h3>Tag: <?= $tags['title']; ?></h3>
 		</div>
 	</section><!-- /.Header -->
 
@@ -54,7 +54,7 @@ $this->title = $tag->title;
 						<a href="<?= Url::to(['site/blog_view', 'id'=>$article->id]); ?>"><h5><?= $article->title; ?></h5></a>
 						<div class="blog_line"></div>
 						<p>
-							By <a href="#">Admin</a><i class="fas fa-circle"></i>In <a href="#"><?= $article->category->title; ?></a>
+							By <a href="<?= Url::to(['site/author','id'=>$article->author->id]); ?>"><?= $article->author->name; ?></a><i class="fas fa-circle"></i>In <a href="<?= Url::to(['site/category','id'=>$article->category->id]); ?>"><?= $article->category->title; ?></a>
 						</p>
 						<p><?= $article->description; ?></p>
 						<a href="<?= Url::to(['site/blog_view', 'id'=>$article->id]); ?>" class="button_blog button_blog-swap_blog">Read more<span>Read more</span></a>
@@ -65,5 +65,10 @@ $this->title = $tag->title;
 		</div>
                
 	</section><!--/.Blog section-->
-
+ <!--Pagination-->
+                <?php
+                echo LinkPager::widget([
+    'pagination' => $pagination,
+]);
+                ?><!--/.Pagination-->
  

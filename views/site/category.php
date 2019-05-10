@@ -5,9 +5,6 @@
 namespace app\views\site\category;
 
 use yii\helpers\Url;
-use yii\helpers\Html;
-use app\assets\GaelAsset;
-use Yii;
 use yii\widgets\LinkPager;
 
 $this->title = $category->title;
@@ -57,7 +54,7 @@ $this->title = $category->title;
 						<a href="<?= Url::to(['site/blog_view', 'id'=>$article->id]); ?>"><h5><?= $article->title; ?></h5></a>
 						<div class="blog_line"></div>
 						<p>
-							By <a href="#">Admin</a><i class="fas fa-circle"></i>In <a href="#"><?= $article->category->title; ?></a>
+							By <a href="<?= Url::to(['site/author','id'=>$article->author->id]); ?>"><?= $article->author->name; ?></a><i class="fas fa-circle"></i>In <a href="<?= Url::to(['site/category','id'=>$article->category->id]); ?>"><?= $article->category->title; ?></a>
 						</p>
 						<p><?= $article->description; ?></p>
 						<a href="<?= Url::to(['site/blog_view', 'id'=>$article->id]); ?>" class="button_blog button_blog-swap_blog">Read more<span>Read more</span></a>
