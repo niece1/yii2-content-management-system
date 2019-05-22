@@ -3324,7 +3324,53 @@ ul.pagination li.disabled:hover {
   display: inline-block;
 }
 
+.contact .contact_wrapper .contact_form #cap_cha {
+  width: 100%;
+  margin: 0 0 30px 0;
+}
 
+.contact .contact_wrapper .contact_form #cap_cha input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-bottom: 2px solid #000;
+  font-size: 1.6rem;
+  display: inline-block;
+}
+
+.contact .contact_wrapper .contact_form #cap_cha input::-webkit-input-placeholder {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.contact .contact_wrapper .contact_form #cap_cha input:-ms-input-placeholder {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.contact .contact_wrapper .contact_form #cap_cha input::-ms-input-placeholder {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.contact .contact_wrapper .contact_form #cap_cha input::placeholder {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.contact .contact_wrapper .contact_form #cap_cha input:focus {
+  outline: none;
+}
+
+.contact .contact_wrapper .contact_form #cap_cha input:focus ~ label, .contact .contact_wrapper .contact_form #name input:valid ~ label {
+  top: -1.4rem;
+  font-size: 1.2rem;
+  color: #ffcc00;
+}
+
+.contact .contact_wrapper .contact_form #cap_cha input:focus ~ .bar:before {
+  width: 100%;
+}
 
 
 

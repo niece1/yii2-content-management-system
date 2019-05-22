@@ -46,9 +46,9 @@ $this->title = 'Contact';
 
                     <?= $form->field($model, 'email') ?>
 
-                    <?= $form->field($model, 'subject') ?>
+                
 
-                    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+                    <?= $form->field($model, 'message')->textarea(['rows' => 6]) ?>
 
                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                         'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
@@ -86,24 +86,32 @@ $this->title = 'Contact';
 			<div class="contact_form">
 				<h4>Don’t be shy…</h4>
 				<p>We’re friendly! whether you’d like us to work on a project for you or not. If you do decide to send us a message, we’ll do our very best to get back to you within 24 hours.</p>
-				<div class="group" id="name">
-					<input type="text" required="required">				
-					 <span class="highlight"></span><span class="bar"></span>
-					 <label>Name</label>  
-				</div>
+				
+                                <?php $form = ActiveForm::begin(); ?>
 
-				<div class="group" id="email">
-					<input type="email" required="required">
-                    <span class="highlight"></span><span class="bar"></span>
-                    <label>Email</label>
-				</div>
+                    <?= $form->field($model, 'name', [
+                    'template' => "{input}<span class=\"highlight\"></span><span class=\"bar\"></span>{label}{error}",
+'options'=>['id'=>'name','class'=>'group']])->textInput(['required' => 'required', 'autofocus' => true]) ?>
 
-				<div class="group" id="message">
-					<input type="text" required="required">
-                      <span class="highlight"></span><span class="bar"></span>
-                      <label>Message</label>
-				</div>
-				<button type="submit" class="button_contact_form button_contact_form-swap_contact_form">Send<span>Send</span></button>
+                    <?= $form->field($model, 'email', [
+                    'template' => "{input}<span class=\"highlight\"></span><span class=\"bar\"></span>{label}{error}",
+'options'=>['id'=>'email','class'=>'group']])->textInput(['required' => 'required']) ?>
+
+                
+
+                    <?= $form->field($model, 'message', [
+                    'template' => "{input}<span class=\"highlight\"></span><span class=\"bar\"></span>{label}{error}",
+'options'=>['id'=>'message','class'=>'group']])->textinput(['required' => 'required']) ?>
+
+                    <?= $form->field($model, 'verifyCode', ['template'=>"<div class=\"group\" id=\"cap_cha\">{input}{label}<span class=\"highlight\"></span><span class=\"bar\"></span></div>{error}"])->widget(Captcha::className(), [
+                        'template' =>'{image}{input}',
+                        'options'=>['required' => 'required'],
+                        'imageOptions'=>['style'=>'display: left;']
+                    ]) ?>
+
+                    <?= Html::submitButton('Submit<span>Submit</span>', ['class' => 'button_contact_form button_contact_form-swap_contact_form']) ?>
+
+                <?php ActiveForm::end(); ?>
 			</div>
 			<div class="direct_contact">
 				<h4>General inquiries</h4>
