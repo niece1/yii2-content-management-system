@@ -52,7 +52,7 @@ class ContactForm extends Model
             Yii::$app->mailer->compose()
                 ->setTo($email)
                 ->setFrom([$this->email => $this->name])
-                ->setTextBody($this->body)
+                ->setTextBody($this->message)
                 ->send();
 
             return true;

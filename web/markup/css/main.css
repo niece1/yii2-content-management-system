@@ -2205,7 +2205,6 @@ footer .footer_wrapper_down .footer_newsletter a:hover {
 .contact .contact_wrapper .contact_form button.button_contact_form {
   border: 2px solid #ffcc00;
   padding: 12px 45px;
-  margin-top: 15px;
   font-size: 1.6rem;
   position: relative;
   outline: none;
@@ -3324,9 +3323,12 @@ ul.pagination li.disabled:hover {
   display: inline-block;
 }
 
+.field-contactform-verifycode {
+  width: 100%;
+}
+
 .contact .contact_wrapper .contact_form #cap_cha {
   width: 100%;
-  margin: 0 0 30px 0;
 }
 
 .contact .contact_wrapper .contact_form #cap_cha input {
