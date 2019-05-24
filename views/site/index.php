@@ -69,7 +69,7 @@ $this->registerMetaTag([
 			<div class="main_slider">
 				<div class="slide_item">
 					<figure>
-						<img src="img/IMG_2809.jpg" alt="Granada">
+						<img src="/markup/img/IMG_2809.jpg" alt="Granada">
 						<figcaption>
 
 						</figcaption>
@@ -78,7 +78,7 @@ $this->registerMetaTag([
 				</div>
 				<div class="slide_item">
 					<figure>
-						<img src="img/IMG_7463.jpg" alt="Granada">
+						<img src="/markup/img/IMG_3993.jpg" alt="Granada">
 						<figcaption>
 
 						</figcaption>
@@ -87,7 +87,7 @@ $this->registerMetaTag([
 				</div>
 				<div class="slide_item">
 					<figure>
-						<img src="img/IMG_2809.jpg" alt="Granada">
+						<img src="/markup/img/IMG_0805.jpg" alt="Granada">
 						<figcaption>
 
 						</figcaption>
@@ -96,7 +96,7 @@ $this->registerMetaTag([
 				</div>
 				<div class="slide_item">
 					<figure>
-						<img src="img/IMG_7463.jpg" alt="Granada">
+						<img src="/markup/img/IMG_7463.jpg" alt="Granada">
 						<figcaption>
 
 						</figcaption>

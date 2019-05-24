@@ -3374,5 +3374,10 @@ ul.pagination li.disabled:hover {
   width: 100%;
 }
 
+.contact_form .alert {
+  font-size: 1.6px;
+  color: #ffcc00;
+}
+
 
 
