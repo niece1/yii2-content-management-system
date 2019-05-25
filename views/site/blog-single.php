@@ -16,7 +16,7 @@ $this->title = $article->title;
 <!--Header-->
 	<section class="header" data-type="background" style="background-image: url(/markup/img/IMG_5521.jpg);">
 		<div class="menu_page">
-			<a href="index.html">gael</a>			
+			<a href="<?= Url::to(['site/index']);?>">gael</a>			
 			
 			<div id="trigger-overlay" class="hamburger_wrapper">
 				<div class="hamburger_menu"></div>	  
@@ -123,13 +123,13 @@ $this->title = $article->title;
 					<ul class="popular">
                                              <?php foreach($popular as $article):?>
 						<li>						
-								<a href="#">
+								<a href="<?= Url::to(['site/blog_view', 'id'=>$article->id]); ?>">
 									<img src="<?= $article->getImage(); ?>" alt="Post image">
 								</a>
 							
 							<div class="post_description">
 								<p>
-									<a href="#"><?= $article->title; ?></a>
+									<a href="<?= Url::to(['site/blog_view', 'id'=>$article->id]); ?>"><?= $article->title; ?></a>
 								</p>
 								<small class="post_date"><?= $article->getDate(); ?></small>
 							</div>

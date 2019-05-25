@@ -45,7 +45,7 @@ $this->registerMetaTag([
 
 			<h1>Lorem ipsum dolor sit gael.</h1>
 			<p class="main_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ipsum, dolor consequuntur quisquam quibusdam delectus, vitae ratione molestias dolorem dolorum tenetur minima esse modi provident cum iste blanditiis porro, dolore repudiandae non nemo voluptate reprehenderit. Possimus asperiores itaque, repudiandae qui perspiciatis voluptate nostrum? Odit, nobis ut optio nulla aperiam blanditiis?</p>
-			<a href="#" class="button button-swap">Read more<span>Read more</span></a>
+			<a href="<?= Url::to(['site/about']);?>" class="button button-swap">Read more<span>Read more</span></a>
 
 			<ul id="follow">
 				<li>Folow me:</li>
@@ -59,7 +59,7 @@ $this->registerMetaTag([
 		<div class="right_hand">
 
 			<div class="menu">
-				<a href="index.html">Gael</a>			
+				<a href="<?= Url::to(['site/index']);?>">Gael</a>			
 				
 				<div id="trigger-overlay" class="hamburger_wrapper">
 					<div class="hamburger_menu"></div>	  
@@ -123,7 +123,7 @@ $this->registerMetaTag([
 			<div class="about_content">
 				<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, quaerat.</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident voluptatibus saepe omnis dolor optio in minus excepturi quod earum accusamus incidunt quo, quas voluptatum dolore ex qui blanditiis est iure dolorem nostrum. Veritatis nostrum pariatur labore, voluptatem quae. Quaerat cupiditate, quia aspernatur vitae adipisci nesciunt? Consequatur facilis inventore cupiditate nam optio aliquam aspernatur commodi nihil ipsa quas dolor, similique.</p>
-				<a href="#"><span>More about me</span></a>
+				<a href="<?= Url::to(['site/about']);?>"><span>More about me</span></a>
 				<div class="qualities">
 					<div class="qualities_block">
 						<div class="quality_holder">
@@ -295,7 +295,7 @@ $this->registerMetaTag([
 						<a href="<?= Url::to(['site/blog_view', 'id'=>$article->id]); ?>"><h5><?= $article->title; ?></h5></a>
 						<div class="blog_line"></div>
 						<p>
-							By <a href="#">Admin</a><i class="fas fa-circle"></i>In <a href="#"><?= $article->category->title; ?></a>
+							By <a href="<?= Url::to(['site/author','id'=>$article->author->id]); ?>"><?= $article->author->name; ?></a><i class="fas fa-circle"></i>In <a href="#"><?= $article->category->title; ?></a>
 						</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, fugiat!</p>
 						<a href="<?= Url::to(['site/blog_view', 'id'=>$article->id]); ?>" class="button_blog button_blog-swap_blog">Read more<span>Read more</span></a>

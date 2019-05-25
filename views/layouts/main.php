@@ -75,7 +75,7 @@ GaelAsset::register($this);
 			<div class="footer_about">
 				<a href="<?= Url::to(['site/index']);?>" class="footer_logo">Gael</a>		
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis veniam unde tenetur ullam. Amet, reprehenderit ea nam voluptatibus quisquam harum!</p>
-				<a href="#"><span>Read more</span></a>
+				<a href="<?= Url::to(['site/about']);?>"><span>Read more</span></a>
 			</div>
 
 			<div class="footer_contact">
@@ -83,7 +83,7 @@ GaelAsset::register($this);
 				<p><i class="fab fa-viber"></i>+380 63 257 1046</p>
 				<p><i class="far fa-envelope"></i>gael@gmail.com</p>
 				<p><i class="fab fa-skype"></i>vladimir.zhonchuk</p>
-				<a href="#"><span>Contact me</span></a>
+				<a href="<?= Url::to(['site/contact']);?>"><span>Contact me</span></a>
 			</div>
 
 			<div class="footer_links">

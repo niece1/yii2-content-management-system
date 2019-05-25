@@ -13,7 +13,7 @@ $this->title = 'Albums';
 <!--Header-->
 	<section class="header" data-type="background" style="background-image: url(/markup/img/IMG_2056.jpg);">
 		<div class="menu_page">
-			<a href="/">gael</a>			
+			<a href="<?= Url::to(['site/index']);?>">gael</a>			
 			
 			<div id="trigger-overlay" class="hamburger_wrapper">
 				<div class="hamburger_menu"></div>	  

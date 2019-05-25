@@ -6,7 +6,7 @@ namespace frontend\assets;
 
 use yii\helpers\Html;
 use app\assets\GaelAsset;
-
+use yii\helpers\Url;
 $this->title = 'About';
 ?>
 
@@ -14,7 +14,7 @@ $this->title = 'About';
 <!--Header-->
 	<section class="header" style="background-image: url(/markup/img/IMG_6254.jpg);">
 		<div class="menu_page">
-			<a href="index.html">gael</a>			
+			<a href="<?= Url::to(['site/index']);?>">gael</a>			
 			
 			<div id="trigger-overlay" class="hamburger_wrapper">
 				<div class="hamburger_menu"></div>	  
