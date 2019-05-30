@@ -25,12 +25,12 @@ $this->registerMetaTag([
 		<div class="left_hand">
 			<ul id="login">
                             <?php if(Yii::$app->user->isGuest):?>
-				<li><a href="<?= Url::to(['registration/login']);?>">login</a></li>
-				<li><a href="<?= Url::to(['registration/signup']);?>">sign up</a></li>
+				<li><a href="<?= Url::to(['registration/login']);?>"><?php echo Yii::t('menu', 'login'); ?></a></li>
+				<li><a href="<?= Url::to(['registration/signup']);?>"><?php echo Yii::t('menu', 'sign up'); ?></a></li>
                                 <?php else: ?>
                                 <?= Html::beginForm(['/registration/logout'], 'post')
                        .  '<li>'   . Html::submitButton(
-                                'Logout (' . Yii::$app->user->identity->name . ')',
+                                Yii::t('menu', 'Logout ({username})', ['username' => Yii::$app->user->identity->name]),
                                 ['class' => 'logout_button'])
                             . Html::endForm() . '</li>' ?>
                                  <?php endif;?>

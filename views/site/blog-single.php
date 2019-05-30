@@ -23,7 +23,7 @@ $this->title = $article->title;
 			</div>	  
 		</div>
 		<div class="parallax_text">
-			<h3><?=$article->title; ?></h3>
+			<h3><?php echo Yii::t('blog', '{variable}', ['variable' => $article->title]); ?></h3>
 		</div>
 	</section><!-- /.Header -->
         

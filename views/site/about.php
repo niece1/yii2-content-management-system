@@ -4,6 +4,7 @@
 
 namespace frontend\assets;
 
+use Yii;
 use yii\helpers\Html;
 use app\assets\GaelAsset;
 use yii\helpers\Url;

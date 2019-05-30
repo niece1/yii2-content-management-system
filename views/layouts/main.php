@@ -4,6 +4,7 @@
 /* @var $content string */
 /* @var $model frontend\models\Subscribe */
 
+
 use app\widgets\Alert;
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -55,11 +56,11 @@ GaelAsset::register($this);
         <?= Menu::widget([
     
     'items' => [        
-        ['label' => 'Home', 'url' => ['site/index']],
-        ['label' => 'About', 'url' => ['site/about']],
-        ['label' => 'Albums', 'url' => ['site/albums']],
-        ['label' => 'Blog', 'url' => ['site/blog']],
-        ['label' => 'Contact', 'url' => ['site/contact']]
+        ['label' => Yii::t('menu', 'Home'), 'url' => ['site/index']],
+        ['label' => Yii::t('menu', 'About'), 'url' => ['site/about']],
+        ['label' => Yii::t('menu', 'Albums'), 'url' => ['site/albums']],
+        ['label' => Yii::t('menu', 'Blog'), 'url' => ['site/blog']],
+        ['label' => Yii::t('menu', 'Contact'), 'url' => ['site/contact']]
     ],
     'activeCssClass' => 'active_page',
 ]);
@@ -139,7 +140,7 @@ GaelAsset::register($this);
 						<svg class="tooltip__shape" width="100%" height="100%" viewBox="0 0 400 300">
 							<path d="M 22,108 22,236 C 22,236 64,216 103,212 142,208 184,212 184,212 L 200,229 216,212 C 216,212 258,207 297,212 336,217 378,236 378,236 L 378,108 C 378,108 318,83.7 200,83.7 82,83.7 22,108 22,108 Z"/>
 						</svg>
-						<div class="tooltip__content" id="info-dori">Choose language</div>
+						<div class="tooltip__content" id="info-dori">Switch to English</div>
 					</div>
 				</div>
 				<p>	&#169; Copyright <?= date('Y')?> Gael. Powered by NoaSoft.</p>
