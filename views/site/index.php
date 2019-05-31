@@ -37,8 +37,13 @@ $this->registerMetaTag([
 			</ul>
 
 			<ul id="choose_language">
-				<li><a href="#" class="active">rus</a></li>
-				<li><a href="#">en</a></li>
+                            <li>
+                                <?=Html::beginForm(['/site/language']) ?>
+                                 <?=Html::dropDownList('language', Yii::$app->language, ['en-US' => 'eng', 'ru-RU' => 'rus']) ?>
+                                 <?= Html::submitButton('Go<span>Go</span>', ['class' => 'button_language_header button_language_header-swap_language_header']) ?>
+                                 <?=Html::endForm() ?>
+                            </li>
+				
 			</ul>
 
 			<p id="vertical_line">Adventures live here</p>

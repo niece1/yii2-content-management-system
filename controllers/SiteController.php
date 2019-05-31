@@ -13,6 +13,7 @@ use app\models\Article;
 use app\models\Tag;
 use app\models\CommentForm;
 use app\models\User;
+use yii\web\Cookie;
 
 class SiteController extends Controller
 {
@@ -189,6 +190,19 @@ class SiteController extends Controller
             'pagination'=>$data['pagination'],
              'user' => $user,
             ]);
+    }
+    public function actionLanguage()
+    {
+        $language = Yii::$app->request->post('language');
+        Yii::$app->language = $language;
+        
+        $languageCookie = new Cookie([
+            'name' => 'language',
+            'value' => $language,
+            'expire' => time() + 60 * 60 * 24 * 30, // 30 days
+        ]);
+        Yii::$app->response->cookies->add($languageCookie);
+        return $this->redirect(Yii::$app->request->referrer);
     }
 
 }

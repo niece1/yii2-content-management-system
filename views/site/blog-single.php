@@ -11,7 +11,7 @@ use Yii;
 use yii\widgets\LinkPager;
 use yii\widgets\ActiveForm;
 
-$this->title = $article->title;
+$this->title = Yii::t('blog', $article->title);
 ?>
 <!--Header-->
 	<section class="header" data-type="background" style="background-image: url(/markup/img/IMG_5521.jpg);">
@@ -23,7 +23,7 @@ $this->title = $article->title;
 			</div>	  
 		</div>
 		<div class="parallax_text">
-			<h3><?php echo Yii::t('blog', '{variable}', ['variable' => $article->title]); ?></h3>
+			<h3><?php echo Yii::t('blog', $article->title); ?></h3>
 		</div>
 	</section><!-- /.Header -->
         

@@ -7,5 +7,6 @@
  */
 return [
     'London close up' => 'Лондон сблизка',
+    'The Berlin wall' => 'Берлинская стена',
 ];
 

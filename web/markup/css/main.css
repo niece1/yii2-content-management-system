@@ -270,19 +270,67 @@ ul {
   text-transform: uppercase;
 }
 
-.main .left_hand ul#choose_language li a {
+.main .left_hand ul#choose_language li form select {
+  border: 1px solid #ffcc00;
+  background-color: transparent;
+  color: #ffcc00;
+  outline: none;
+}
+
+.main .left_hand ul#choose_language li form select option {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.main .left_hand ul#choose_language li button.button_language_header {
+  border: 2px solid #ffcc00;
+  padding: 2px 12px;
+  font-size: 1.2rem;
+  position: relative;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
   color: #fff;
+  background-color: transparent;
 }
 
-.main .left_hand ul#choose_language li a:hover {
-  color: #ffcc00;
-  -webkit-transition: all .5s ease-out;
-  -o-transition: all .5s ease-out;
-  transition: all .5s ease-out;
+.main .left_hand ul#choose_language li button.button_language_header-swap_language_header span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2px 12px;
+  font-size: 1.2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0;
+  color: #000;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
 }
 
-.main .left_hand ul#choose_language li a.active {
-  color: #ffcc00;
+.main .left_hand ul#choose_language li button.button_language_header-swap_language_header:before {
+  content: "";
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: #ffcc00;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.main .left_hand ul#choose_language li button.button_language_header-swap_language_header:hover:before {
+  width: 100%;
+}
+
+.main .left_hand ul#choose_language li button.button_language_header-swap_language_header:hover span {
+  opacity: 1;
 }
 
 .main .left_hand h1 {
@@ -1552,14 +1600,6 @@ footer .footer_wrapper_down .footer_copyright .tooltip__trigger-text {
   pointer-events: none;
 }
 
-footer .footer_wrapper_down .footer_copyright .tooltip__trigger-text h6 {
-  font-weight: normal;
-  margin: 0 0 10px 0;
-}
-
-footer .footer_wrapper_down .footer_copyright a {
-  color: #fff;
-}
 
 footer .footer_wrapper_down .footer_copyright .tooltip {
   position: relative;
@@ -1570,6 +1610,77 @@ footer .footer_wrapper_down .footer_copyright .tooltip__trigger {
   cursor: pointer;
   position: relative;
   display: inline-block;
+}
+
+footer .footer_wrapper_down .footer_copyright .tooltip__trigger i {
+  float: left;
+}
+
+footer .footer_wrapper_down .footer_copyright .tooltip__trigger form  {
+	float: left;
+}
+
+footer .footer_wrapper_down .footer_copyright .tooltip__trigger form select {
+  border: 1px solid #ffcc00;
+  background-color: transparent;
+  color: #ffcc00;
+  outline: none;
+}
+
+footer .footer_wrapper_down .footer_copyright .tooltip__trigger form select option {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+}
+
+footer .footer_wrapper_down .footer_copyright .tooltip__trigger form button.button_language_footer {
+  border: 2px solid #ffcc00;
+  padding: 2px 12px;
+  font-size: 1.2rem;
+  position: relative;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+}
+
+footer .footer_wrapper_down .footer_copyright .tooltip__trigger form button.button_language_footer-swap_language_footer span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2px 12px;
+  font-size: 1.2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0;
+  color: #000;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+footer .footer_wrapper_down .footer_copyright .tooltip__trigger form button.button_language_footer-swap_language_footer:before {
+  content: "";
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: #ffcc00;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+footer .footer_wrapper_down .footer_copyright .tooltip__trigger form button.button_language_footer-swap_language_footer:hover:before {
+  width: 100%;
+}
+
+footer .footer_wrapper_down .footer_copyright .tooltip__trigger form button.button_language_footer-swap_language_footer:hover span {
+  opacity: 1;
 }
 
 footer .footer_wrapper_down .footer_copyright .tooltip__base {

@@ -134,13 +134,17 @@ GaelAsset::register($this);
 				
 				<div class="tooltip tooltip--dori" data-type="dori">
 					<div class="tooltip__trigger" role="tooltip" aria-describedby="info-dori">
-						<i class="fas fa-globe"></i><a href="about.html"><span class="tooltip__trigger-text"><h6>English</h6></span></a>
+						<i class="fas fa-globe"></i>
+                                                <?=Html::beginForm(['/site/language']) ?>
+                                 <?=Html::dropDownList('language', Yii::$app->language, ['en-US' => 'eng', 'ru-RU' => 'rus']) ?>
+                                 <?= Html::submitButton('Go<span>Go</span>', ['class' => 'button_language_footer button_language_footer-swap_language_footer']) ?>
+                                 <?=Html::endForm() ?>
 					</div>
 					<div class="tooltip__base">
 						<svg class="tooltip__shape" width="100%" height="100%" viewBox="0 0 400 300">
 							<path d="M 22,108 22,236 C 22,236 64,216 103,212 142,208 184,212 184,212 L 200,229 216,212 C 216,212 258,207 297,212 336,217 378,236 378,236 L 378,108 C 378,108 318,83.7 200,83.7 82,83.7 22,108 22,108 Z"/>
 						</svg>
-						<div class="tooltip__content" id="info-dori">Switch to English</div>
+						<div class="tooltip__content" id="info-dori">Choose language</div>
 					</div>
 				</div>
 				<p>	&#169; Copyright <?= date('Y')?> Gael. Powered by NoaSoft.</p>
