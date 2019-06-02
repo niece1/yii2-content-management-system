@@ -147,7 +147,7 @@ GaelAsset::register($this);
 						<div class="tooltip__content" id="info-dori">Choose language</div>
 					</div>
 				</div>
-				<p>	&#169; Copyright <?= date('Y')?> Gael. Powered by NoaSoft.</p>
+                            <p class="copy">	&#169; Copyright <?= date('Y')?> Gael. Powered by NoaSoft.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, repellendus.</p>
 			</div>
 

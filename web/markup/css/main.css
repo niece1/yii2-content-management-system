@@ -1750,6 +1750,10 @@ footer .footer_wrapper_down .footer_copyright p {
   color: #9c9c9c;
 }
 
+footer .footer_wrapper_down .footer_copyright p.copy {
+  margin-top: 15px;
+}
+
 footer .footer_wrapper_down .footer_newsletter {
   padding: 30px 0;
 }
@@ -3487,6 +3491,10 @@ ul.pagination li.disabled:hover {
 
 .contact_form .alert {
   font-size: 1.6px;
+  color: #ffcc00;
+}
+
+p.flash_yellow {
   color: #ffcc00;
 }
 

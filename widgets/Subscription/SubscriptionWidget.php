@@ -30,7 +30,7 @@ class SubscriptionWidget extends Widget
          $model = new SubscriberForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if($model->saveEmail()) {
-                 Yii::$app->session->setFlash('subscribeStatus', 'Subscribe completed! Thank you.');
+                 Yii::$app->session->setFlash('subscribeStatus');
             }
         }
     
