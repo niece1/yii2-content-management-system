@@ -10,6 +10,7 @@ use app\assets\GaelAsset;
 use Yii;
 use yii\widgets\LinkPager;
 use yii\widgets\ActiveForm;
+use app\widgets\Search\SearchWidget;
 
 $this->title = Yii::t('blog', $article->title);
 ?>
@@ -112,10 +113,11 @@ $this->title = Yii::t('blog', $article->title);
 
 			<div class="sidebar">
 				<div class="search_widget">
-					<form action="#" class="input-search" data-text="">
+                                    <?= SearchWidget::widget([]) ?>
+				<!--	<form action="#" class="input-search" data-text="">
 						<input type="text" id="search" placeholder="Search">
 						<button type="submit" class="button_sidebar button_sidebar-swap_sidebar"><i class="fas fa-search"></i><span><i class="fas fa-search"></i></span></button>
-					</form>
+					</form> -->
 				</div>
 
 				<div class="popular-posts_widget">
