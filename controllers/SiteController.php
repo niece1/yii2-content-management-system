@@ -204,5 +204,9 @@ class SiteController extends Controller
         Yii::$app->response->cookies->add($languageCookie);
         return $this->redirect(Yii::$app->request->referrer);
     }
+    public function actionSearch()
+    {
+        return $this->render('search');
+    }
 
 }

@@ -2740,24 +2740,20 @@ button.button_loadmore-swap_loadmore:hover span {
 
 .blog_single .blog_single_wrapper .sidebar .search_widget form.input-search input {
   border: none;
-  width: 70%;
+  width: 90%;
   border-bottom: 3px solid #000;
   outline: none;
   font-size: 1.6rem;
   padding: 10px 0;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 910px) {
   .blog_single .blog_single_wrapper .sidebar .search_widget form.input-search input {
     width: 90%;
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .blog_single .blog_single_wrapper .sidebar .search_widget form.input-search input {
-    width: 70%;
-  }
-}
+
 
 .blog_single .blog_single_wrapper .sidebar .search_widget form.input-search input::-webkit-input-placeholder {
   color: #ffcc00;

@@ -1,7 +1,7 @@
 <?php
 
 
-/* @var $model app\models\Subscribe */
+/* @var $model app\models\Subscriber */
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;

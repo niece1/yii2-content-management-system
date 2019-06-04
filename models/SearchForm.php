@@ -3,11 +3,12 @@
 namespace app\models;
 
 use yii\base\Model;
+use app\models\Search;
 
 /**
  * ContactForm is the model behind the contact form.
  */
-class SearchForm extends yii\base\Model
+class SearchForm extends Model
 {
     public $keyword;
     
@@ -19,7 +20,14 @@ class SearchForm extends yii\base\Model
         return [
             ['keyword', 'trim'],
             ['keyword', 'required'],
-            ['ketword', 'string', 'min' => 3],
+            ['keyword', 'string', 'min' => 3],
         ];
+    }
+    public function search()
+    {
+        if ($this->validate()) {
+            $model = new Search();
+            return $model->articleSearch($this->keyword);
+        }
     }
 }

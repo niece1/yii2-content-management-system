@@ -19,9 +19,15 @@ class SearchWidget extends Widget
     }
     public function run() 
     {      
+    $model = new SearchForm();
+    $results = null;
     
+    if($model->load(Yii::$app->request->post())) {
+        $results = $model->search();
+    }
      return $this->render('search', [
-            'model' => $model,
+         'model' => $model,
+         'results' => $results,
         ]);
     
     }
