@@ -10,9 +10,9 @@ use Yii;
  */
 class Search
 {
-    public function articleSearch()
+    public function articleSearch($keyword)
     {
-        $sql = "SELECT * FROM article WHERE content LIKE '%$keyword%' LIMIT 20";
+        $sql = "SELECT * FROM article WHERE content LIKE '%$keyword%' LIMIT 10";
         return Yii::$app->db->createCommand($sql)->queryAll();
     }
 }

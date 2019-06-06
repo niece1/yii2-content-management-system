@@ -4,10 +4,10 @@
 
 namespace frontend\assets;
 
+use Yii;
 use yii\helpers\Url;
 use yii\helpers\Html;
 use app\assets\GaelAsset;
-use Yii;
 use yii\widgets\LinkPager;
 
 $this->title = 'Search results';
@@ -34,10 +34,15 @@ $this->title = 'Search results';
 		<h5>News and Events</h5>
 		<div class="blog_wrapper">
                   <?php if ($results): ?>
-                    <?php foreach($results as $item):?>
-			 <?php echo $item['title']; ?>
+                    <?php foreach($results as $item):?> 
+                    <?php echo $item['image']; ?><br>
+                    <?php echo $item['description']; ?><br>
+			 <?php echo $item['title']; ?><br>
+                    <?php echo $item['content']; ?><br>
 <?php endforeach; ?>
                     <?php endif; ?>
+                    
+                    
 		</div>
                
 	</section><!--/.Blog section-->

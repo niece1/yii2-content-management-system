@@ -38,7 +38,7 @@ $this->title = 'Blog';
 			<div class="blog_item">
 				<div class="thumbnail">
 					<a href="<?= Url::to(['site/blog_view', 'id'=>$article->id]); ?>">
-						<img src="<?= $article->getImage();?>" alt="Blogpost">
+						<img src="<?= $article->getImage(); ?>" alt="Blogpost">
 						<div class="thumbnail_overlay">
 
 						</div>
