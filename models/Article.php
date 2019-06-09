@@ -200,4 +200,8 @@ class Article extends \yii\db\ActiveRecord
         $this->viewed += 1;
         return $this->save(false);
     }
+    public function articleSearch($keyword)
+    {   
+       return Article::find()->where(['like', 'content', $keyword])->all();
+    } 
 }

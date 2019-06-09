@@ -15,6 +15,7 @@ use app\models\CommentForm;
 use app\models\User;
 use yii\web\Cookie;
 use app\models\SearchForm;
+use yii\helpers\ArrayHelper;
 
 class SiteController extends Controller
 {
@@ -207,11 +208,12 @@ class SiteController extends Controller
     }
     public function actionSearch()
     {
-        $model = new SearchForm();
+        $model = new SearchForm(); 
         $results = null;
     
     if($model->load(Yii::$app->request->post())) {
         $results = $model->search();
+     //  var_dump($results);die;
     }
         return $this->render('search', [
             'results' => $results,

@@ -3,7 +3,7 @@
 namespace app\models;
 
 use yii\base\Model;
-use app\models\Search;
+use app\models\Article;
 
 /**
  * ContactForm is the model behind the contact form.
@@ -26,7 +26,7 @@ class SearchForm extends Model
     public function search()
     {
         if ($this->validate()) {
-            $model = new Search();
+            $model = new Article();
             return $model->articleSearch($this->keyword);
         }
     }
