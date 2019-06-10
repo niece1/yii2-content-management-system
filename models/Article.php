@@ -202,6 +202,6 @@ class Article extends \yii\db\ActiveRecord
     }
     public function articleSearch($keyword)
     {   
-       return Article::find()->where(['like', 'content', $keyword])->all();
+        return Article::find()->where(['like', 'content', $keyword]);
     } 
 }

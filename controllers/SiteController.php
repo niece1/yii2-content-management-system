@@ -16,6 +16,7 @@ use app\models\User;
 use yii\web\Cookie;
 use app\models\SearchForm;
 use yii\helpers\ArrayHelper;
+use yii\data\Pagination;
 
 class SiteController extends Controller
 {
@@ -212,11 +213,17 @@ class SiteController extends Controller
         $results = null;
     
     if($model->load(Yii::$app->request->post())) {
-        $results = $model->search();
+        $query = $model->search();
      //  var_dump($results);die;
     }
-        return $this->render('search', [
+     $count = $query->count();
+     $pagination = new Pagination(['totalCount' => $count, 'pageSize'=>9]);
+     $results = $query->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+        return $this->render('search', [         
             'results' => $results,
+            'pagination' => $pagination,
         ]);
     }
 
