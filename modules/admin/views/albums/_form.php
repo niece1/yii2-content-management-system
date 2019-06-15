@@ -14,49 +14,49 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'image_main')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set main image', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_01')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 01', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_02')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 02', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_03')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 03', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_04')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 04', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_05')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 05', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_06')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 06', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_07')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 07', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_08')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 08', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_09')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 09', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_10')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 10', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_11')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 11', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_12')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 12', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_13')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 13', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_14')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 14', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_15')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 15', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_16')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 16', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_17')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 17', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_18')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 18', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_19')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 19', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_20')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 20', ['set-image', 'id' => $model->id]) ?><br>
 
-    <?= $form->field($model, 'image_21')->textInput(['maxlength' => true]) ?>
+    <?= Html::a('Set image 21', ['set-image', 'id' => $model->id]) ?><br>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

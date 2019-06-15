@@ -85,4 +85,13 @@ class Albums extends \yii\db\ActiveRecord
             'image_21' => 'Image 21',
         ];
     }
+    public function saveImage($filename)
+    {
+        $this->image_main = $filename;
+        return $this->save(false);
+    }
+    public function getImage()
+    {
+        return ($this->image_main) ? '/uploads/' . $this->image_main : '/no-image.png';
+    }
 }

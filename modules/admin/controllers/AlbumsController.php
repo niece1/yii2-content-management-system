@@ -8,6 +8,8 @@ use app\models\AlbumsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\ImageUpload;
+use yii\web\UploadedFile;
 
 /**
  * AlbumsController implements the CRUD actions for Albums model.
@@ -123,5 +125,20 @@ class AlbumsController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+    public function actionSetImage($id)
+    {
+        $model = new ImageUpload;
+     //   die('Page not found');
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage($model->uploadFile($file, $albums->image_main)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
     }
 }

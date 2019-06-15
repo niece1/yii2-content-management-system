@@ -28,17 +28,23 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'title',
-            'image_main',
+            [
+                'format' => 'html',
+                'label' => 'Image',
+                'value' => function($data){
+                    return Html::img($data->getImage(), ['width'=>200]);
+                }
+            ],
             'image_01',
             'image_02',
-            //'image_03',
-            //'image_04',
-            //'image_05',
-            //'image_06',
-            //'image_07',
-            //'image_08',
-            //'image_09',
-            //'image_10',
+            'image_03',
+            'image_04',
+            'image_05',
+            'image_06',
+            'image_07',
+            'image_08',
+            'image_09',
+            'image_10',
             //'image_11',
             //'image_12',
             //'image_13',
