@@ -141,4 +141,49 @@ class AlbumsController extends Controller
         }
         return $this->render('/article/image', ['model'=>$model]);
     }
+    public function actionSetImage01($id)
+    {
+        $model = new ImageUpload;
+     //   die('Page not found');
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage01($model->uploadFile($file, $albums->image_01)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage02($id)
+    {
+        $model = new ImageUpload;
+     //   die('Page not found');
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage02($model->uploadFile($file, $albums->image_02)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage03($id)
+    {
+        $model = new ImageUpload;
+     //   die('Page not found');
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage03($model->uploadFile($file, $albums->image_03)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
 }
