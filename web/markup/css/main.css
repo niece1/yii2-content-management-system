@@ -3494,6 +3494,11 @@ p.flash_yellow {
   color: #ffcc00;
 }
 
+.grid_wrapper {
+  overflow-y: hidden;
+  overflow: auto;
+  height: 1000px;
+}
 
 
 

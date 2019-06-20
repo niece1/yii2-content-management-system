@@ -4,11 +4,9 @@
 
 namespace frontend\assets;
 
+use Yii;
 use yii\helpers\Url;
 use yii\helpers\Html;
-use app\assets\GaelAsset;
-use Yii;
-use yii\widgets\LinkPager;
 use yii\widgets\ActiveForm;
 use app\widgets\Search\SearchWidget;
 

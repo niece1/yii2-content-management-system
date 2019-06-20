@@ -144,7 +144,6 @@ class AlbumsController extends Controller
     public function actionSetImage01($id)
     {
         $model = new ImageUpload;
-     //   die('Page not found');
         if (Yii::$app->request->isPost)
         {
             $albums = $this->findModel($id);
@@ -159,7 +158,6 @@ class AlbumsController extends Controller
     public function actionSetImage02($id)
     {
         $model = new ImageUpload;
-     //   die('Page not found');
         if (Yii::$app->request->isPost)
         {
             $albums = $this->findModel($id);
@@ -174,12 +172,263 @@ class AlbumsController extends Controller
     public function actionSetImage03($id)
     {
         $model = new ImageUpload;
-     //   die('Page not found');
         if (Yii::$app->request->isPost)
         {
             $albums = $this->findModel($id);
             $file = UploadedFile::getInstance($model, 'image');
             if($albums->saveImage03($model->uploadFile($file, $albums->image_03)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage04($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage04($model->uploadFile($file, $albums->image_04)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage05($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage05($model->uploadFile($file, $albums->image_05)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage06($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage06($model->uploadFile($file, $albums->image_06)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage07($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage07($model->uploadFile($file, $albums->image_07)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage08($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage08($model->uploadFile($file, $albums->image_08)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage09($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage09($model->uploadFile($file, $albums->image_09)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage10($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage10($model->uploadFile($file, $albums->image_10)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage11($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage11($model->uploadFile($file, $albums->image_11)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage12($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage12($model->uploadFile($file, $albums->image_12)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage13($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage13($model->uploadFile($file, $albums->image_13)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage14($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage14($model->uploadFile($file, $albums->image_14)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage15($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage15($model->uploadFile($file, $albums->image_15)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage16($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage16($model->uploadFile($file, $albums->image_16)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage17($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage17($model->uploadFile($file, $albums->image_17)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage18($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage18($model->uploadFile($file, $albums->image_18)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage19($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage19($model->uploadFile($file, $albums->image_19)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage20($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage20($model->uploadFile($file, $albums->image_20)))
+            {
+                return $this->redirect(['view', 'id'=>$albums->id]);
+            }
+        }
+        return $this->render('/article/image', ['model'=>$model]);
+    }
+    public function actionSetImage21($id)
+    {
+        $model = new ImageUpload;
+        if (Yii::$app->request->isPost)
+        {
+            $albums = $this->findModel($id);
+            $file = UploadedFile::getInstance($model, 'image');
+            if($albums->saveImage21($model->uploadFile($file, $albums->image_21)))
             {
                 return $this->redirect(['view', 'id'=>$albums->id]);
             }

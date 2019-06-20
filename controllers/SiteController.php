@@ -15,7 +15,7 @@ use app\models\CommentForm;
 use app\models\User;
 use yii\web\Cookie;
 use app\models\SearchForm;
-use yii\helpers\ArrayHelper;
+use app\models\Albums;
 use yii\data\Pagination;
 
 class SiteController extends Controller
@@ -70,9 +70,11 @@ class SiteController extends Controller
     public function actionIndex()
     {
          $recent = Article::getRecent();
+         $shots = Albums::getPhotos();
 
         return $this->render('index', [
             'recent'=>$recent,
+            'shots'=>$shots,
         ]);
     }
 
@@ -160,7 +162,17 @@ class SiteController extends Controller
      */
     public function actionAlbums()
     {
-        return $this->render('albums');
+        $shots = Albums::getPhotos();
+        return $this->render('albums',[
+            'shots' => $shots,
+        ]);
+    }
+    public function actionAlbum_view($id)
+    {
+        $album_item = Albums::findOne($id);
+        return $this->render('album-single',[
+            'album_item' => $album_item,
+        ]);
     }
     public function actionCategory($id)
     {

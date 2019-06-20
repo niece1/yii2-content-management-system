@@ -184,89 +184,17 @@ $this->registerMetaTag([
 		<h5>I chose the very best of my shots.</h5>
 		
 		<div class="portfolio_container aware_direction">
-
+                    <?php foreach($shots as $album):?>
 			<div class="portfolio_item">
-				<a href="#">
-					<img src="/markup/img/IMG_6462.jpg" alt="board">
+				<a href="<?= Url::to(['site/album_view', 'id'=>$album->id]); ?>">
+					<img src="<?= $album->getImage();?>" alt="board">
 					<div>
-						<div class="caption">Another Flight History</div>
+						<div class="caption"><?= $album->title; ?></div>
 					</div>
 				</a>
 			</div>
-
-			<div class="portfolio_item">
-				<a href="#">
-					<img src="/markup/img/IMG_7791.jpg" alt="board">
-					<div>
-						<div class="caption">Jewish place. Sevilla</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="portfolio_item">
-				<a href="#">
-					<img src="/markup/img/IMG_7886.jpg" alt="board">
-					<div>
-						<div class="caption">The Berlin Wall</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="portfolio_item">
-				<a href="#">
-					<img src="/markup/img/IMG_2017.jpg" alt="board">
-					<div>
-						<div class="caption">The Rabat Medina</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="portfolio_item">
-				<a href="#">
-					<img src="/markup/img/IMG_5254.jpg" alt="board">
-					<div>
-						<div class="caption">Grape harvest 2018</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="portfolio_item">
-				<a href="#">
-					<img src="/markup/img/IMG_5425.jpg" alt="board">
-					<div>
-						<div class="caption">Venice Close Up</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="portfolio_item">
-				<a href="#">
-					<img src="/markup/img/IMG_5725.jpg" alt="laptop">
-					<div>
-						<div class="caption">San Marino</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="portfolio_item">
-				<a href="#">
-					<img src="/markup/img/IMG_5057.jpg" alt="board">
-					<div>
-						<div class="caption">Grape harvest 2018</div>
-					</div>
-				</a>
-			</div>
-
-
-			<div class="portfolio_item">
-				<a href="#">
-					<img src="/markup/img/IMG_8537.jpg" alt="board">
-					<div>
-						<div class="caption">Mysterous Qobustan</div>
-					</div>
-				</a>
-			</div>
-
+	
+                 <?php endforeach; ?>
 		</div>
 
 	</section><!--/.Portfolio section-->
