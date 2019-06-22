@@ -33,16 +33,27 @@ $this->title = Yii::t('blog', $album_item->title);
 		<div id="imageGallery" class="album_container">
 
 			<div class="album_items">			
-				<img src="<?=$album_item->getImage01(); ?>" alt="board">
-				<img src="<?=$album_item->getImage02(); ?>" alt="board">
-                                <img src="<?=$album_item->getImage03(); ?>" alt="board">
-                                <img src="<?=$album_item->getImage04(); ?>" alt="board">
-                                <img src="<?=$album_item->getImage05(); ?>" alt="board">
-                                <img src="<?=$album_item->getImage06(); ?>" alt="board">
-                                <img src="<?=$album_item->getImage07(); ?>" alt="board">
-                                <img src="<?=$album_item->getImage08(); ?>" alt="board">
-                                <img src="<?=$album_item->getImage09(); ?>" alt="board">
-                                <img src="<?=$album_item->getImage10(); ?>" alt="board">
+				<?php if($album_item->image_01): ?><img src="<?=$album_item->getImage01(); ?>" alt="board"> <?php endif;?>
+				<?php if($album_item->image_02): ?><img src="<?=$album_item->getImage02(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_03): ?><img src="<?=$album_item->getImage03(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_04): ?><img src="<?=$album_item->getImage04(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_05): ?><img src="<?=$album_item->getImage05(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_06): ?><img src="<?=$album_item->getImage06(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_07): ?><img src="<?=$album_item->getImage07(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_08): ?><img src="<?=$album_item->getImage08(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_09): ?><img src="<?=$album_item->getImage09(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_10): ?><img src="<?=$album_item->getImage10(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_11): ?><img src="<?=$album_item->getImage11(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_12): ?><img src="<?=$album_item->getImage12(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_13): ?><img src="<?=$album_item->getImage13(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_14): ?><img src="<?=$album_item->getImage14(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_15): ?><img src="<?=$album_item->getImage15(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_16): ?><img src="<?=$album_item->getImage16(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_17): ?><img src="<?=$album_item->getImage17(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_18): ?><img src="<?=$album_item->getImage18(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_19): ?><img src="<?=$album_item->getImage19(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_20): ?><img src="<?=$album_item->getImage20(); ?>" alt="board"> <?php endif;?>
+                                <?php if($album_item->image_21): ?><img src="<?=$album_item->getImage21(); ?>" alt="board"> <?php endif;?>
 			</div>
 
 		</section><!--/.Portfolio section-->

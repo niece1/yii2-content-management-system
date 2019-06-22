@@ -17,12 +17,13 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Albums', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <div class="grid_wrapper">
+    
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'options' => ['class' => 'grid-view own-grid'],
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
@@ -186,5 +187,4 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
-    </div>
 </div>
