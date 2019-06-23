@@ -6,15 +6,29 @@
 /* @var $exception Exception */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = $name;
 ?>
+<!--Header-->
+	<section class="header" data-type="background" style="background-image: url(/markup/img/IMG_5521.jpg);">
+		<div class="menu_page">
+			<a href="<?= Url::to(['site/index']);?>">gael</a>			
+			
+			<div id="trigger-overlay" class="hamburger_wrapper">
+				<div class="hamburger_menu"></div>	  
+			</div>	  
+		</div>
+		<div class="parallax_text">
+			<h3><?= Html::encode($this->title) ?></h3>
+		</div>
+	</section><!-- /.Header -->
+        
 <div class="site-error">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
+    <div class="site-error_wrapper">
+        
     <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+        <h5>  <?= nl2br(Html::encode($message)) ?></h5>
     </div>
 
     <p>
@@ -23,5 +37,5 @@ $this->title = $name;
     <p>
         Please contact us if you think this is a server error. Thank you.
     </p>
-
+</div>
 </div>

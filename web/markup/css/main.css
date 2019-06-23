@@ -3494,6 +3494,12 @@ p.flash_yellow {
   color: #ffcc00;
 }
 
+.site-error {
+  width: 85%;
+  margin: 50px auto;
+}
+
+
 
 
 
