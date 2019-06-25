@@ -25,7 +25,6 @@ $this->title = $name;
 	</section><!-- /.Header -->
         
 <div class="site-error">
-    <div class="site-error_wrapper">
         
     <div class="alert alert-danger">
         <h5>  <?= nl2br(Html::encode($message)) ?></h5>
@@ -37,5 +36,5 @@ $this->title = $name;
     <p>
         Please contact us if you think this is a server error. Thank you.
     </p>
-</div>
+    <a href="<?= Url::to(['site/index']);?>" class="button_error button-swap_error">Back to home<span>Back to home</span></a>
 </div>

@@ -115,4 +115,9 @@ a.desc:after {
 }
 .albums-index .own-grid {
     overflow-x: scroll;
-    }
+}
+
+.article-form .form-group button {
+    margin-top: 10px;
+}
+
